@@ -1,0 +1,252 @@
+﻿<UserControl x:Class="Jarvis_2._0.MovieInfoWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Jarvis_2._0"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="1010">
+    
+    <Grid Background="#FF111111" x:Name="MovieInfoGrid">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button
+            Background="#FF0A0A0A"
+            Width="45"
+            Height="45"
+            Padding="0"
+            Margin="15 15 15 25"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center" 
+            BorderBrush="#FF2B2B2B"
+            VerticalAlignment="Top"
+            x:Name="BackButton"
+            Click="BackButton_Click">
+            
+            <materialDesign:PackIcon
+                Kind="ArrowLeft"
+                Height="30"
+                Width="30"
+                Foreground="#FF858585"
+                Margin="0 0 0 0">
+                
+            </materialDesign:PackIcon>
+            
+        </Button>
+
+        <materialDesign:Card
+            Height="409"
+            Width="269"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="10 0 0 0"
+            Grid.Column="1">
+
+            <materialDesign:Card.Background>
+                <ImageBrush Stretch="Fill" x:Name="MoviePoster" AlignmentY="Top" AlignmentX="Center"/>
+            </materialDesign:Card.Background>
+
+        </materialDesign:Card>
+
+        <Grid Grid.Column="2">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock 
+                Foreground="#FFBDBDBD" 
+                Grid.Row="1" 
+                FontSize="35" 
+                FontWeight="DemiBold" 
+                Margin="30 0 0 0" 
+                FontFamily="Agency FB"
+                x:Name="Title"
+                TextWrapping="Wrap">
+                Captain America - The First Avenger
+            </TextBlock>
+
+            <StackPanel
+                Grid.Row="2" 
+                Orientation="Horizontal"
+                Margin="0 10 0 0">
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="17" 
+                    FontWeight="Normal" 
+                    Margin="30 0 0 0" 
+                    FontFamily="Agency FB"
+                    x:Name="Genre"
+                    TextWrapping="Wrap">
+                    Genre: Action, Adventure, Sci-Fi
+                </TextBlock>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    Grid.Row="3" 
+                    FontSize="17" 
+                    FontWeight="Normal" 
+                    Margin="30 0 0 0" 
+                    FontFamily="Agency FB"
+                    x:Name="Year"
+                    TextWrapping="Wrap">
+                Year: 2010
+                </TextBlock>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    Grid.Row="3" 
+                    FontSize="17" 
+                    FontWeight="Normal" 
+                    Margin="30 0 0 0" 
+                    FontFamily="Agency FB"
+                    x:Name="Runtime"
+                    TextWrapping="Wrap">
+                    Runtime: 142m
+                </TextBlock>
+
+            </StackPanel>
+
+            <TextBlock 
+                Foreground="#FF9E9E9E" 
+                FontSize="21" 
+                FontWeight="Normal" 
+                Margin="30 50 40 0" 
+                FontFamily="Agency FB"
+                Grid.Row="4" 
+                x:Name="Plot"
+                TextWrapping="Wrap">
+                Plot: Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
+            </TextBlock>
+
+            <TextBlock 
+                Foreground="#FF9E9E9E" 
+                FontSize="19" 
+                FontWeight="Normal" 
+                Margin="30 30 0 0" 
+                FontFamily="Agency FB"
+                Grid.Row="5" 
+                x:Name="Director"
+                TextWrapping="Wrap">
+                Director: Kevin Feige
+                </TextBlock>
+
+            <TextBlock 
+                Foreground="#FF9E9E9E" 
+                FontSize="19" 
+                FontWeight="Normal" 
+                Margin="30 10 40 0" 
+                FontFamily="Agency FB"
+                Grid.Row="6" 
+                x:Name="Actors"
+                TextWrapping="Wrap">
+                Actors: Robert Bobert Robert Bobert
+            </TextBlock>
+            
+            <Grid
+                Grid.Row="8"
+                Margin="0 50 0 0">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="280"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="16" 
+                    FontWeight="Normal" 
+                    Margin="30 10 0 0" 
+                    FontFamily="Agency FB"
+                    x:Name="IMDB">
+                    IMDB: 8.7
+                </TextBlock>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="16" 
+                    FontWeight="Normal" 
+                    Margin="10 10 0 0" 
+                    FontFamily="Agency FB"
+                    Grid.Column="1"
+                    x:Name="Rated">
+                    Rated: PG-13
+                </TextBlock>
+
+                <Button
+                    Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                    Margin="8 0 0 0"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="False"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Background="#FF8BC34A" BorderBrush="#FF8BC34A"
+                    Grid.Column="2"
+                    x:Name="PlayPause"
+                    Click="PlayPause_Click">
+
+                    <materialDesign:PackIcon
+                        Height="24"
+                        Width="24"
+                        x:Name="PlayPauseIcon"
+                        Kind="Play">
+                    </materialDesign:PackIcon>
+                    
+                </Button>
+
+                <Button
+                    Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                    Margin="8 0 0 0"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="False"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Background="#FF9B281D" BorderBrush="#FF9B281D"
+                    materialDesign:ButtonProgressAssist.IndicatorForeground="#FF9B281D"
+                    Grid.Column="3"
+                    x:Name="Stop"
+                    Click="Stop_Click">
+
+                    <materialDesign:PackIcon
+                        Height="24"
+                        Width="24"
+                        Kind="Stop">
+                    </materialDesign:PackIcon>
+                    
+                </Button>
+
+            </Grid>
+
+        </Grid>
+        
+    </Grid>
+    
+</UserControl>
