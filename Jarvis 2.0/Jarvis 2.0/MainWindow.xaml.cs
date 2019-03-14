@@ -8,6 +8,8 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Jarvis_2._0.NewElements;
+using Jarvis_2._0.Windows;
 
 #endregion
 //clean
@@ -140,8 +142,14 @@ namespace Jarvis_2._0
 
             NewMovieElement.buttonID = 0;
 
+            ShowsWindow.columnCounter = 0;
+            ShowsWindow.rowCounter = 0;
+
+            NewShowElement.buttonID = 0;
+
             consoleActive = false;
 
+            DataManagement.generatedShows = 0;
             DataManagement.generatedMovies = 0;
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
@@ -164,6 +172,11 @@ namespace Jarvis_2._0
                 case "Movies":
                     Console.Write("\n\nMovies Clicked. \n");
                     usc = new MoviesWindow();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "Shows":
+                    Console.Write("\n\nShows Clicked. \n");
+                    usc = new ShowsWindow();
                     GridMain.Children.Add(usc);
                     break;
                 case "Mobile":

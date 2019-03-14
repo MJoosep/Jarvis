@@ -111,6 +111,12 @@
                             <TextBlock Text="Movies" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem x:Name="Shows" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="TvClassic" Height="25" Width="25" Margin="15 10 10 10"/>
+                            <TextBlock Text="Shows" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
                     <!-- x:Name="Mobile" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="MobilePhone" Height="25" Width="25" Margin="15 10 10 10"/>

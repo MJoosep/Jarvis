@@ -13,6 +13,9 @@ using System.Net;
 using OMDbApiNet;
 using OMDbApiNet.Model;
 using System.ComponentModel;
+using Jarvis_2._0.DataClasses;
+using Jarvis_2._0.NewElements;
+using Jarvis_2._0.Windows;
 
 #endregion
 //clean
@@ -27,8 +30,11 @@ namespace Jarvis_2._0
         public static List<AddAction> ActionsList = new List<AddAction>();
         public static List<AddMovie> MoviesList = new List<AddMovie>();
         public static List<AddMovieInfo> MoviesInfoList = new List<AddMovieInfo>();
+        public static List<AddShow> ShowsList = new List<AddShow>();
+        public static List<AddShowInfo> ShowsInfoList = new List<AddShowInfo>();
 
         public static int generatedMovies = 0;
+        public static int generatedShows = 0;
 
         #endregion
         //clean
@@ -748,12 +754,115 @@ namespace Jarvis_2._0
             WriteAllLinesBetter(@"Movies\Movies.txt", oldMovieNames.ToArray());
         }
 
-        static bool IsNullOrEmpty(string[] myStringArray)
+        #endregion
+        //clean
+
+        #region ShowsData
+
+        public static void GenerateInitialShows()
         {
-            return myStringArray == null || myStringArray.Length < 1;
+            GenerateShowsList();
+
+            Console.Write("\nShows Generated: ");
+
+            string[] readText = File.ReadAllLines(@"Shows\ShowsInfo.txt");
+
+            foreach (string line in readText)
+            {
+                if (generatedShows < 6)
+                {
+                    string[] separate = Regex.Split(line, "I---I");
+
+                    NewShowElement.Add(ShowsWindow.Instance.ShowGrid, separate[0], separate[1], separate[2], separate[3], separate[4], separate[5]);
+
+                    ShowsWindow.SetPosition();
+
+                    generatedShows++;
+                }
+            }
+        }
+
+        public static void GenerateMoreShows()
+        {
+            string[] readText = File.ReadAllLines(@"Shows\ShowsInfo.txt");
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (generatedShows < readText.Length)
+                {
+                    string[] separate = Regex.Split(readText[generatedShows], "I---I");
+
+                    NewShowElement.Add(ShowsWindow.Instance.ShowGrid, separate[0], separate[1], separate[2], separate[3], separate[4], separate[5]);
+
+                    ShowsWindow.SetPosition();
+
+                    generatedShows++;
+                }
+            }
+        }
+
+        public static void GenerateShowsList()
+        {
+            ShowsList = null;
+            ShowsList = new List<AddShow>();
+
+            var show = new AddShow();
+            string[] showsPaths = Directory.GetDirectories(@"Shows");
+            List<string> shows = new List<string>();
+
+            foreach (var showItem in showsPaths)
+            {
+                show.ShowName = Path.GetDirectoryName(showItem);
+                show.ShowFolderPath = showItem;
+
+                ShowsList.Add(show);
+
+                show = null;
+                show = new AddShow();
+            }
+        }
+
+        public static void GetShowInfo(string show)
+        {
+            OmdbClient omdb = new OmdbClient("a6c971b", false);
+
+            SearchList searchList = omdb.GetSearchList(show);
+
+            SearchItem result = searchList.SearchResults[0];
+
+            Item item = omdb.GetItemByTitle(result.Title);
+
+            var showVar = new AddShowInfo();
+
+            showVar.Title = item.Title;
+            showVar.Genre = item.Genre;
+            showVar.Director = item.Director;
+            showVar.Actors = item.Actors;
+            showVar.IMDB = item.ImdbRating;
+            showVar.Poster = item.Poster;
+
+            ShowsInfoList.Add(showVar);
+        }
+
+        public static void WriteShowDataListToFile()
+        {
+            List<string> showDataString = new List<string>();
+
+            foreach (AddShowInfo show in ShowsInfoList)
+            {
+                showDataString.Add(show.Title + "I---I" +
+                                   show.Genre + "I---I" +
+                                   show.Director + "I---I" +
+                                   show.Actors + "I---I" +
+                                   show.IMDB + "I---I" +
+                                   show.Poster);
+            }
+
+            WriteAllLinesBetter(@"Shows\ShowsInfo.txt", showDataString.ToArray());
+
+            Console.WriteLine("Shows List Updated Successfully");
         }
 
         #endregion
-        //clean
     }
 }

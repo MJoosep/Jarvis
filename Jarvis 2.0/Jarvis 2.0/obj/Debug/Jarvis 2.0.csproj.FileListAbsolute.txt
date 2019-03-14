@@ -2682,3 +2682,5 @@ C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\XamlC.sta
 C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\Jarvis 2.0.csproj.CopyComplete
 C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\Jarvis 2.0.exe
 C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\Jarvis 2.0.pdb
+C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\Windows\ShowsWindow.g.cs
+C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\Windows\ShowsWindow.baml

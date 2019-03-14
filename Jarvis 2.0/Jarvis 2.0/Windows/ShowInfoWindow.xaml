@@ -1,0 +1,300 @@
+﻿<UserControl x:Class="Jarvis_2._0.Windows.ShowInfoWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Jarvis_2._0.Windows"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="1010">
+    <Grid Background="#FF191818">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Background="#FF0A0A0A"
+                Width="45"
+                Height="45"
+                Padding="0"
+                Margin="15 15 15 25"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center" 
+                BorderBrush="#FF2B2B2B"
+                VerticalAlignment="Top"
+                x:Name="BackButton">
+
+                <materialDesign:PackIcon
+                    Kind="ArrowLeft"
+                    Height="30"
+                    Width="30"
+                    Foreground="#FF858585"
+                    Margin="0 0 0 0">
+
+                </materialDesign:PackIcon>
+
+            </Button>
+
+            <materialDesign:Card
+                Height="409"
+                Width="269"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="10 0 0 0"
+                Grid.Column="1">
+
+                <materialDesign:Card.Background>
+                    <ImageBrush Stretch="Fill" x:Name="ShowPoster" AlignmentY="Top" AlignmentX="Center"/>
+                </materialDesign:Card.Background>
+
+            </materialDesign:Card>
+
+            <Grid Grid.Column="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock 
+                    Foreground="#FFBDBDBD" 
+                    Grid.Row="1" 
+                    FontSize="25" 
+                    FontWeight="DemiBold" 
+                    Margin="30 0 30 0" 
+                    FontFamily="Agency FB"
+                    x:Name="Title"
+                    TextWrapping="Wrap">
+                    The Blacklist
+                </TextBlock>
+
+                <StackPanel
+                    Grid.Row="2" 
+                    Orientation="Horizontal"
+                    Margin="0 10 0 0">
+
+                    <TextBlock 
+                        Foreground="#FF9E9E9E" 
+                        FontSize="17" 
+                        FontWeight="Normal" 
+                        Margin="30 0 0 0" 
+                        FontFamily="Agency FB"
+                        x:Name="Genre"
+                        TextWrapping="Wrap">
+                        Genre: Crime, Drama, Mystery, Thriller
+                    </TextBlock>
+
+                    <TextBlock 
+                        Foreground="#FF9E9E9E" 
+                        FontSize="17" 
+                        FontWeight="Normal" 
+                        Margin="20 0 0 0" 
+                        FontFamily="Agency FB"
+                        x:Name="Year"
+                        TextWrapping="Wrap">
+                        Year: 2013-
+                    </TextBlock>
+
+                </StackPanel>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="18" 
+                    FontWeight="Normal" 
+                    Margin="30 40 40 0" 
+                    FontFamily="Agency FB"
+                    Grid.Row="4" 
+                    x:Name="Summary"
+                    TextWrapping="Wrap">
+                    A new FBI profiler, Elizabeth Keen, has her entire life uprooted when a mysterious criminal, Raymond Reddington, who has eluded capture for decades, turns himself in and insists on speaking only to her.
+                </TextBlock>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="17" 
+                    FontWeight="Normal" 
+                    Margin="30 30 0 0" 
+                    FontFamily="Agency FB"
+                    Grid.Row="5" 
+                    x:Name="Director"
+                    TextWrapping="Wrap">
+                    Director: N/A
+                </TextBlock>
+
+                <TextBlock 
+                    Foreground="#FF9E9E9E" 
+                    FontSize="17" 
+                    FontWeight="Normal" 
+                    Margin="30 10 40 0" 
+                    FontFamily="Agency FB"
+                    Grid.Row="6" 
+                    x:Name="Actors"
+                    TextWrapping="Wrap">
+                    Actors: Megan Boone, Diego Klattenhoff, James Spader, Harry Lennix
+                </TextBlock>
+
+                <Grid
+                    Grid.Row="8"
+                    Margin="0 50 0 0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="90"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock 
+                        Foreground="#FF9E9E9E" 
+                        FontSize="15" 
+                        FontWeight="Normal" 
+                        Margin="30 10 0 0" 
+                        FontFamily="Agency FB"
+                        x:Name="IMDB">
+                        IMDB: 8.7
+                    </TextBlock>
+
+                    <Button
+                        Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                        Margin="8 0 0 0"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="False"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                        Background="#FF8BC34A" 
+                        BorderBrush="#FF8BC34A"
+                        Grid.Column="2"
+                        x:Name="PlayPause">
+
+                        <materialDesign:PackIcon
+                            Height="24"
+                            Width="24"
+                            x:Name="PlayPauseIcon"
+                            Kind="Play">
+                        </materialDesign:PackIcon>
+
+                    </Button>
+
+                    <Button
+                        Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                        Margin="8 0 0 0"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="False"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                        Background="#FF9B281D" 
+                        BorderBrush="#FF9B281D"
+                        materialDesign:ButtonProgressAssist.IndicatorForeground="#FF9B281D"
+                        Grid.Column="3"
+                        x:Name="Stop">
+
+                        <materialDesign:PackIcon
+                            Height="24"
+                            Width="24"
+                            Kind="Stop">
+                        </materialDesign:PackIcon>
+
+                    </Button>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+        <ScrollViewer
+            Grid.Column="1"
+            VerticalScrollBarVisibility="Hidden">
+
+            <StackPanel 
+                Orientation="Vertical"
+                x:Name="EpisodeList">
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 1 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 2 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 3 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 4 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 5 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 6 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 7 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 8 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 9 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 10 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+                <materialDesign:Card Background="#FF111111" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="50">
+                    <TextBlock FontFamily="Agency FB" FontWeight="Medium"  VerticalAlignment="Center" Margin="20 0 20 0" Foreground="#FF818181" FontSize="15">Episode 11 - This is the title</TextBlock>
+                </materialDesign:Card>
+
+                <Border Height="1" Background="#FF0A0A0A"></Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+        
+    </Grid>
+</UserControl>
