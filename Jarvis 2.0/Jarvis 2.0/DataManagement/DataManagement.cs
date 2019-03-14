@@ -649,7 +649,9 @@ namespace Jarvis_2._0
 
         public static void CheckForNewMovies()
         {
-            string[] directories = Directory.GetDirectories(@"S:\Jarvis\NewMovies");
+            string path = Path.Combine(Windows.Settings.moviesFolder, "NewMovies");
+
+            string[] directories = Directory.GetDirectories(path);
             string[] movieNames = new string[directories.Length];
 
             List<string> fileNames = new List<string>();
@@ -709,15 +711,15 @@ namespace Jarvis_2._0
                     movieNames[movieCounter] = directory.Substring(0, index-1);
                 }
 
-                Directory.Move(@"S:\Jarvis\NewMovies\" + folderNames[movieCounter] + @"\" + fileNames[movieCounter], @"S:\Jarvis\NewMovies\" + folderNames[movieCounter] + @"\" + Path.GetFileName(movieNames[movieCounter]) + ext);
-                Directory.Move(@"S:\Jarvis\NewMovies\" + folderNames[movieCounter], @"S:\Jarvis\Movies\" + Path.GetFileName(movieNames[movieCounter]));
+                Directory.Move(Windows.Settings.moviesFolder + @"\NewMovies\" + folderNames[movieCounter] + @"\" + fileNames[movieCounter], Windows.Settings.moviesFolder + @"\NewMovies\" + folderNames[movieCounter] + @"\" + Path.GetFileName(movieNames[movieCounter]) + ext);
+                Directory.Move(Windows.Settings.moviesFolder + @"\NewMovies\" + folderNames[movieCounter], Windows.Settings.moviesFolder + @"\Movies\" + Path.GetFileName(movieNames[movieCounter]));
 
                 Console.WriteLine("Added movie: " + Path.GetFileName(movieNames[movieCounter]));
 
                 movieCounter++;
             }
 
-            string[] oldDirectories = Directory.GetDirectories(@"S:\Jarvis\Movies");
+            string[] oldDirectories = Directory.GetDirectories(Windows.Settings.moviesFolder + @"\Movies");
 
             List<string> oldMovieNames = new List<string>();
 
@@ -740,7 +742,7 @@ namespace Jarvis_2._0
                     }
                 }
 
-                oldMovieNames.Add(Path.GetFileName(directory) + @"I---IS:\Jarvis\Movies\" + Path.GetFileName(directory) + @"\" + Path.GetFileName(directory) + ext);
+                oldMovieNames.Add(Path.GetFileName(directory) + @"I---I" + Windows.Settings.moviesFolder + @"\Movies\" + Path.GetFileName(directory) + @"\" + Path.GetFileName(directory) + ext);
             }
 
             WriteAllLinesBetter(@"Movies\Movies.txt", oldMovieNames.ToArray());

@@ -10,16 +10,9 @@ namespace Jarvis_2._0
 {
     public class DiscordBot
     {
-        #region Values
-
-        string uri = "https://discordapp.com/api/webhooks/552817880945655819/84m77BGk23298D-Idb5gXACP5m0hdYhVOAljy3QDNdoe7hXgTBA0QDwzEV30HjVb4_7I";
-
-        #endregion
-        //clean
-
         public DiscordBot(string Message)
         {
-            Http.Post(uri, new NameValueCollection()
+            Http.Post(Windows.Settings.discordUri, new NameValueCollection()
             {
                 {
                 "content",

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Jarvis_2._0.Windows"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="1010">
     <Grid>
@@ -14,26 +15,187 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="180"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="1">Discord Uri -></TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="1">Pushover secret -></TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="1">Pushover Device ID -></TextBlock>
-        <TextBlock Grid.Row="3" Grid.Column="1">Torrent Download Destination -></TextBlock>
-        <TextBlock Grid.Row="4" Grid.Column="1">Movies/Shows Folder -></TextBlock>
-        <TextBox x:Name="DiscordURI" Grid.Row="0" Grid.Column="2">AAAAAAAAAAAA</TextBox>
-        <TextBox x:Name="PushoverSecret" Grid.Row="1" Grid.Column="2">AAAAAAAAAAAA</TextBox>
-        <TextBox x:Name="PushoverID" Grid.Row="2" Grid.Column="2">AAAAAAAAAAAA</TextBox>
-        <TextBox x:Name="TorrentDestination" Grid.Row="3" Grid.Column="2">AAAAAAAAAAAA</TextBox>
-        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
-            <TextBox x:Name="MovieFolder">AAAAAAAAAAAA</TextBox>
-            <Button x:Name="ChooseFolder">AAAAAAAAAAAA</Button>
+        <TextBlock 
+            Grid.Row="1" 
+            Grid.Column="1"
+            Margin="0 0 10 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            FontSize="16" 
+            Foreground="#FF7C7C7C" 
+            FontWeight="SemiBold" >
+            Discord Uri
+        </TextBlock>
+        <TextBlock 
+            Grid.Row="2" 
+            Grid.Column="1"
+            Margin="0 0 10 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            FontSize="16" 
+            Foreground="#FF7C7C7C" 
+            FontWeight="SemiBold" >
+            Pushover secret
+        </TextBlock>
+        <TextBlock 
+            Grid.Row="3" 
+            Grid.Column="1"
+            Margin="0 0 10 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            FontSize="16" 
+            Foreground="#FF7C7C7C" 
+            FontWeight="SemiBold" >
+            Pushover Device ID
+        </TextBlock>
+        <TextBlock 
+            Grid.Row="4" 
+            Grid.Column="1"
+            Margin="0 0 10 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            FontSize="16" 
+            Foreground="#FF7C7C7C" 
+            FontWeight="SemiBold" >
+            Torrent Download Destination
+        </TextBlock>
+        <TextBlock 
+            Grid.Row="5" 
+            Grid.Column="1"
+            Margin="0 0 10 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            FontSize="16" 
+            Foreground="#FF7C7C7C" 
+            FontWeight="SemiBold" >
+            Movies/Shows Folder
+        </TextBlock>
+        <TextBox 
+            x:Name="DiscordUri" 
+            Grid.Row="1" 
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Width="400"
+            Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+            VerticalAlignment="Top"
+            AcceptsReturn="True"
+            TextWrapping="NoWrap"
+            materialDesign:HintAssist.Hint="Discord Server URI"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}" >
+
+        </TextBox>
+        <TextBox 
+            x:Name="PushoverSecret" 
+            Grid.Row="2" 
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+            VerticalAlignment="Top"
+            AcceptsReturn="True"
+            TextWrapping="NoWrap"
+            Width="400"
+            materialDesign:HintAssist.Hint="Pushover Secret"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}">
+            
+        </TextBox>
+        <TextBox 
+            x:Name="PushoverId"
+            Grid.Row="3" 
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+            VerticalAlignment="Top"
+            AcceptsReturn="True"
+            TextWrapping="NoWrap"
+            Width="400"
+            materialDesign:HintAssist.Hint="Pushover Device ID"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}" >
+            
+        </TextBox>
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="4" 
+            Grid.Column="2">
+
+            <TextBox 
+                x:Name="TorrentDestination"
+                VerticalAlignment="Top"
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                AcceptsReturn="True"
+                TextWrapping="NoWrap"
+                Margin="0 0 10 0"
+                Width="400"
+                materialDesign:HintAssist.Hint="Torrent Download Location"
+                IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}">
+
+            </TextBox>
+            <Button 
+                x:Name="ChooseDownload"
+                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                ToolTip="MaterialDesignFloatingActionButton"
+                VerticalAlignment="Top" 
+                Background="#FFABB230" 
+                BorderBrush="#FFABB230"
+                Click="ChooseDownload_OnClick">
+                <materialDesign:PackIcon
+                    Kind="File"
+                    Height="24"
+                    Width="24" />
+
+            </Button>
+
         </StackPanel>
-        <Button Grid.Row="5" Grid.Column="2" x:Name="Save">AAAAAAAAAAAA</Button>
+        <StackPanel 
+            Grid.Row="5" 
+            Grid.Column="2" 
+            Orientation="Horizontal">
+            <TextBox 
+                x:Name="MovieFolder"
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                TextWrapping="NoWrap"
+                Width="400"
+                Margin="0 0 10 0"
+                materialDesign:HintAssist.Hint="Movie Folder Location"
+                IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}" >
+                
+            </TextBox>
+            <Button 
+                x:Name="ChooseFolder"
+                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                ToolTip="MaterialDesignFloatingActionButton"
+                VerticalAlignment="Top" 
+                Background="#FFABB230" 
+                BorderBrush="#FFABB230"
+                Click="ChooseFolder_OnClick">
+                <materialDesign:PackIcon
+                    Kind="File"
+                    Height="24"
+                    Width="24" /> 
+                
+            </Button>
+        </StackPanel>
+        <Button 
+            Grid.Row="6" 
+            Grid.Column="3" 
+            x:Name="Save"
+            Height="50"
+            Width="100"
+            Style="{StaticResource MaterialDesignFlatButton}"
+            ToolTip="MaterialDesignFlatButton" 
+            FontSize="18"
+            Click="Save_OnClick">
+            Save
+
+        </Button>
     </Grid>
 </UserControl>

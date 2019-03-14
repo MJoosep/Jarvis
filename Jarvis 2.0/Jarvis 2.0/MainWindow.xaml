@@ -111,12 +111,12 @@
                             <TextBlock Text="Movies" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="Mobile" Height="60">
+                    <!-- x:Name="Mobile" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="MobilePhone" Height="25" Width="25" Margin="15 10 10 10"/>
                             <TextBlock Text="Mobile" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
-                    </ListViewItem>
+                    </-->
                     <ListViewItem x:Name="ConsoleWindow" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Console" Height="25" Width="25" Margin="15 10 10 10"/>

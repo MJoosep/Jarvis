@@ -25,8 +25,8 @@ namespace Jarvis_2._0
 
         public static int highestMessage = 0;
 
-        public static string secret = "8gczmkq7r4omu5h1n1iatv7fktq6utshb8ohsv7v4neaw8r5zj62zsv8ta8d";
-        public static string deviceID = "cb8wmxi7jhkacgd1wvzuhnzj9b1s1r8eyjbt66sm";
+        public static string secret = Windows.Settings.pushoverSecret;
+        public static string deviceID = Windows.Settings.pushoverID;
 
         public static string receiveUrl = "https://api.pushover.net/1/messages.json?secret=" + secret + "&device_id=" + deviceID;
         public static string deleteUrl = "https://api.pushover.net/1/devices/" + deviceID + "/update_highest_message.json";

@@ -13,6 +13,8 @@ Guardians Of The Galaxy Vol. 2I---IS:\Jarvis\Movies\Guardians Of The Galaxy Vol.
 Iron ManI---IS:\Jarvis\Movies\Iron Man\Iron Man.mp4
 Iron Man 2I---IS:\Jarvis\Movies\Iron Man 2\Iron Man 2.mkv
 Iron Man 3I---IS:\Jarvis\Movies\Iron Man 3\Iron Man 3.mp4
+Now You See Me 2I---IS:\Jarvis\Movies\Now You See Me 2\Now You See Me 2.mkv
+Safe HouseI---IS:\Jarvis\Movies\Safe House\Safe House.mkv
 Spider-Man HomecomingI---IS:\Jarvis\Movies\Spider-Man Homecoming\Spider-Man Homecoming.mp4
 The AvengersI---IS:\Jarvis\Movies\The Avengers\The Avengers.mp4
 The Dark KnightI---IS:\Jarvis\Movies\The Dark Knight\The Dark Knight.mp4
@@ -20,4 +22,5 @@ The Dark Knight RisesI---IS:\Jarvis\Movies\The Dark Knight Rises\The Dark Knight
 The Incredible HulkI---IS:\Jarvis\Movies\The Incredible Hulk\The Incredible Hulk.mp4
 ThorI---IS:\Jarvis\Movies\Thor\Thor.mp4
 Thor RagnarokI---IS:\Jarvis\Movies\Thor Ragnarok\Thor Ragnarok.mp4
-Thor The Dark WorldI---IS:\Jarvis\Movies\Thor The Dark World\Thor The Dark World.mp4Dark World.mp4
+Thor The Dark WorldI---IS:\Jarvis\Movies\Thor The Dark World\Thor The Dark World.mp4---IS:\JarvisMovies\Movies\Thor Ragnarok\Thor Ragnarok.mp4
+Thor The Dark WorldI---IS:\JarvisMovies\Movies\Thor The Dark World\Thor The Dark World.mp4

@@ -2,6 +2,8 @@
 
 using System;
 using System.ComponentModel;
+using System.IO;
+using System.Net;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,6 +39,8 @@ namespace Jarvis_2._0
 
             Instance = this;
 
+            Windows.Settings.LoadSettings();
+
             Thread ConsoleOutPut = new Thread(ConsoleOut);
             ConsoleOutPut.Start();
 
@@ -54,13 +58,15 @@ namespace Jarvis_2._0
                 new System.Windows.Forms.MouseEventHandler
                     (JarvisIcon_MouseDoubleClick);
 
-            DataManagement.CheckForNewMovies();
-            
-            MoviesWindow.UpdateMovieData();
+            if(Directory.Exists(Windows.Settings.moviesFolder))
+                DataManagement.CheckForNewMovies();
+
+            if (Directory.Exists(Windows.Settings.moviesFolder))
+                MoviesWindow.UpdateMovieData();
 
 
-            Thread torrent = new Thread(Torrent.TorrentManager.Ragnar);
-            torrent.Start();
+            //Thread torrent = new Thread(Torrent.TorrentManager.Ragnar);
+            //torrent.Start();
         }
         //cleanable
 

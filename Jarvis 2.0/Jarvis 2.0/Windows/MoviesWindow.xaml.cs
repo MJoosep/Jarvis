@@ -30,7 +30,8 @@ namespace Jarvis_2._0
 
             Instance = this;
 
-            DataManagement.GenerateInitialMovies();
+            if (Directory.Exists(Windows.Settings.moviesFolder))
+                DataManagement.GenerateInitialMovies();
         }
 
         #region UpdatingUI
@@ -77,9 +78,12 @@ namespace Jarvis_2._0
 
         private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
-            var scrollViewer = (ScrollViewer)sender;
-            if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
-                DataManagement.GenerateMoreMovies();
+            if (Directory.Exists(Windows.Settings.moviesFolder))
+            {
+                var scrollViewer = (ScrollViewer)sender;
+                if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
+                    DataManagement.GenerateMoreMovies();
+            }
         }
 
         #endregion

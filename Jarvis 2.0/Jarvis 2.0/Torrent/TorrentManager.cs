@@ -22,7 +22,7 @@ namespace Jarvis_2._0.Torrent
                 // we'd like to add.
                 var addParams = new AddTorrentParams
                 {
-                    SavePath = @"C:\Users\Joose\source\repos\Jarvis 2.0\Jarvis 2.0\Torrent\Downloads",
+                    SavePath = Windows.Settings.torrentSavePath,
                     Url = @"C:\Users\Joose\source\repos\Jarvis 2.0\Jarvis 2.0\Torrent\Torrents\Aquaman (2018) [WEBRip] [1080p] [YTS.AM].torrent"
                 };
 
