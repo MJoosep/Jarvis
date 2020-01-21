@@ -1,7 +1,6 @@
 ﻿#region Imports
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -23,5 +22,4 @@ namespace Jarvis_2._0
         public string receipt { set; get; }
         public string html { set; get; }
     }
-    //clean
 }

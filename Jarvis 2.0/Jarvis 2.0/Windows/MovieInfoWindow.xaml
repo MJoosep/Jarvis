@@ -7,13 +7,13 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="1010">
-    
+
     <Grid Background="#FF111111" x:Name="MovieInfoGrid">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
@@ -32,16 +32,14 @@
             VerticalAlignment="Top"
             x:Name="BackButton"
             Click="BackButton_Click">
-            
+
             <materialDesign:PackIcon
                 Kind="ArrowLeft"
                 Height="30"
                 Width="30"
                 Foreground="#FF858585"
-                Margin="0 0 0 0">
-                
-            </materialDesign:PackIcon>
-            
+                Margin="0 0 0 0"/>
+
         </Button>
 
         <materialDesign:Card
@@ -59,7 +57,7 @@
         </materialDesign:Card>
 
         <Grid Grid.Column="2">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
@@ -72,11 +70,11 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
             <TextBlock 
                 Foreground="#FFBDBDBD" 
                 Grid.Row="1" 
@@ -145,7 +143,7 @@
 
             <TextBlock 
                 Foreground="#FF9E9E9E" 
-                FontSize="19" 
+                FontSize="17" 
                 FontWeight="Normal" 
                 Margin="30 30 0 0" 
                 FontFamily="Agency FB"
@@ -153,11 +151,11 @@
                 x:Name="Director"
                 TextWrapping="Wrap">
                 Director: Kevin Feige
-                </TextBlock>
+            </TextBlock>
 
             <TextBlock 
                 Foreground="#FF9E9E9E" 
-                FontSize="19" 
+                FontSize="17" 
                 FontWeight="Normal" 
                 Margin="30 10 40 0" 
                 FontFamily="Agency FB"
@@ -166,17 +164,17 @@
                 TextWrapping="Wrap">
                 Actors: Robert Bobert Robert Bobert
             </TextBlock>
-            
+
             <Grid
                 Grid.Row="8"
                 Margin="0 50 0 0">
-                
+
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="280"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="70"></ColumnDefinition>
@@ -218,9 +216,8 @@
                         Height="24"
                         Width="24"
                         x:Name="PlayPauseIcon"
-                        Kind="Play">
-                    </materialDesign:PackIcon>
-                    
+                        Kind="Play"/>
+
                 </Button>
 
                 <Button
@@ -238,15 +235,14 @@
                     <materialDesign:PackIcon
                         Height="24"
                         Width="24"
-                        Kind="Stop">
-                    </materialDesign:PackIcon>
-                    
+                        Kind="Stop"/>
+
                 </Button>
 
             </Grid>
 
         </Grid>
-        
+
     </Grid>
-    
+
 </UserControl>

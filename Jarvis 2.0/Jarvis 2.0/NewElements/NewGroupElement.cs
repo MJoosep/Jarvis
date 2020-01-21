@@ -7,7 +7,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -323,7 +322,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region EventHandlers
 
@@ -425,6 +423,5 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
     }
 }

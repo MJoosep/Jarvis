@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region Imports
+
+#endregion
 
 namespace Jarvis_2._0.DataClasses
 {

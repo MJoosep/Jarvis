@@ -6,7 +6,6 @@ using System.Text;
 using System.Windows.Controls;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -30,5 +29,4 @@ namespace Jarvis_2._0
             get { return System.Text.Encoding.UTF8; }
         }
     }
-    //clean
 }

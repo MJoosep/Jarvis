@@ -1,7 +1,6 @@
 ﻿#region Imports
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -10,5 +9,4 @@ namespace Jarvis_2._0
         public string MovieName { set; get; }
         public string MoviePath { set; get; }
     }
-    //clean
 }

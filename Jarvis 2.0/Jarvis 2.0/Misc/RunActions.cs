@@ -6,7 +6,6 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -76,5 +75,4 @@ namespace Jarvis_2._0
             }
         }
     }
-    //clean
 }

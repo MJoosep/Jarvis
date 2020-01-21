@@ -1,7 +1,6 @@
 ﻿#region Imports
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -13,5 +12,4 @@ namespace Jarvis_2._0
         public string ActionFileName { set; get; }
         public string ActionPathName { set; get; }
     }
-    //clean
 }

@@ -18,7 +18,6 @@ using Jarvis_2._0.NewElements;
 using Jarvis_2._0.Windows;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -37,7 +36,6 @@ namespace Jarvis_2._0
         public static int generatedShows = 0;
 
         #endregion
-        //clean
 
         #region GroupsData
 
@@ -355,7 +353,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region ActionsData
 
@@ -510,7 +507,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region MoviesData
 
@@ -755,7 +751,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region ShowsData
 

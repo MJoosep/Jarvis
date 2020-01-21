@@ -9,7 +9,6 @@ using System.Windows.Controls;
 using System.Windows.Media;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -21,7 +20,6 @@ namespace Jarvis_2._0
         public static string newPathName = "";
 
         #endregion
-        //clean
 
         #region NewActionExpander
 
@@ -329,7 +327,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region EventHandlers
 
@@ -469,6 +466,5 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
     }
 }

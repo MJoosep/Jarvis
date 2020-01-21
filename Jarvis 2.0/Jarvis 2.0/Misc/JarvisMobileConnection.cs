@@ -6,7 +6,6 @@ using System.Net.Sockets;
 using System.Text;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0.Misc
 {
@@ -62,5 +61,5 @@ namespace Jarvis_2._0.Misc
             Console.WriteLine("\n Press any key to continue...");
         }
     }
-    //clean
+    //Not working - Work in progress
 }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿#region Imports
+
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -11,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Jarvis_2._0.Windows;
 using MaterialDesignThemes.Wpf;
+
+#endregion
 
 namespace Jarvis_2._0.NewElements
 {
@@ -21,7 +20,6 @@ namespace Jarvis_2._0.NewElements
         public static int buttonID = 0;
 
         #endregion
-        //clean
 
         #region MakeShowCard
 
@@ -225,7 +223,6 @@ namespace Jarvis_2._0.NewElements
         }
 
         #endregion
-        //clean
 
         #region EventHandlers
 
@@ -269,6 +266,5 @@ namespace Jarvis_2._0.NewElements
         }
 
         #endregion
-        //clean
     }
 }

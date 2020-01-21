@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading.Tasks;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -26,7 +25,6 @@ namespace Jarvis_2._0
         public static string playerStatus = "Stopped";
 
         #endregion
-        //clean
 
         public async void PlayMovieAsync(string path)
         {
@@ -38,7 +36,6 @@ namespace Jarvis_2._0
             
             StartCasting(path);
         }
-        //clean
 
         private void StartCasting(string path)
         {
@@ -58,7 +55,6 @@ namespace Jarvis_2._0
 
             Console.WriteLine("\nPlaying on: " + _rendererItems.First().Name);
         }
-        //clean
 
         bool DiscoverChromecasts()
         {
@@ -76,7 +72,6 @@ namespace Jarvis_2._0
             
             return _rendererDiscoverer.Start();
         }
-        //clean
 
         void RendererDiscoverer_ItemAdded(object sender, RendererDiscovererItemAddedEventArgs e)
         {
@@ -91,6 +86,5 @@ namespace Jarvis_2._0
                 Console.WriteLine("Can render audio");
 
         }
-        //clean
     }
 }

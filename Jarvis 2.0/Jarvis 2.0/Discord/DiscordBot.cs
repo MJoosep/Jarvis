@@ -4,7 +4,6 @@ using System.Collections.Specialized;
 using System.Net;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -21,7 +20,6 @@ namespace Jarvis_2._0
             });
         }
     }
-    //clean
 
     class Http
     {
@@ -31,5 +29,4 @@ namespace Jarvis_2._0
                 return webClient.UploadValues(uri, pairs);
         }
     }
-    //clean
 }

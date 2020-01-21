@@ -65,12 +65,7 @@ namespace Jarvis_2._0
 
             if (Directory.Exists(Windows.Settings.moviesFolder))
                 MoviesWindow.UpdateMovieData();
-
-
-            //Thread torrent = new Thread(Torrent.TorrentManager.Ragnar);
-            //torrent.Start();
         }
-        //cleanable
 
         #region Updating UI elements
 
@@ -116,7 +111,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region EventHandlers
 
@@ -231,6 +225,5 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
     }
 }

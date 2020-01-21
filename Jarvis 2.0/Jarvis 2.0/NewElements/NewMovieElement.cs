@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -22,7 +21,6 @@ namespace Jarvis_2._0
         public static int buttonID = 0;
 
         #endregion
-        //clean
 
         #region MakeMovieCard
 
@@ -226,7 +224,6 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
 
         #region EventHandlers
 
@@ -322,6 +319,5 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
     }
 }

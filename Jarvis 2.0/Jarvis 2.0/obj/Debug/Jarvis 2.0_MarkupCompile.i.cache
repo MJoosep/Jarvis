@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\
+D:\Arendus\GitHub\MJoosep\Jarvis\Jarvis 2.0\Jarvis 2.0\obj\Debug\
 Jarvis_2._0
 none
 false
 DEBUG;TRACE
-C:\Users\Joose\Documents\GitHub\Jarvis\Jarvis 2.0\Jarvis 2.0\App.xaml
+D:\Arendus\GitHub\MJoosep\Jarvis\Jarvis 2.0\Jarvis 2.0\App.xaml
 10-1709498354
 5462962110
-37-1389727794
-176278167065
+33-1397494066
+176-1430252700
 Windows\ConsoleWindow.xaml;MainWindow.xaml;Windows\GroupsWindow.xaml;Windows\ActionsWindow.xaml;Windows\JarvisMobile.xaml;Windows\MovieInfoWindow.xaml;Windows\MoviesWindow.xaml;Windows\Settings.xaml;Windows\ShowInfoWindow.xaml;Windows\ShowsWindow.xaml;
 
 True

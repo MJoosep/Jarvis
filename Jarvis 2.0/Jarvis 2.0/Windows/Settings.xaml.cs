@@ -1,19 +1,12 @@
-﻿using System;
+﻿#region Imports
+
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UserControl = System.Windows.Controls.UserControl;
+
+#endregion
 
 namespace Jarvis_2._0.Windows
 {
@@ -42,7 +35,6 @@ namespace Jarvis_2._0.Windows
             PushoverSecret.Text = pushoverSecret;
             PushoverId.Text = pushoverID;
             MovieFolder.Text = moviesFolder;
-            TorrentDestination.Text = torrentSavePath;
         }
 
         public static void LoadSettings()
@@ -53,7 +45,6 @@ namespace Jarvis_2._0.Windows
             pushoverSecret = settings[1];
             pushoverID = settings[2];
             moviesFolder = settings[3];
-            torrentSavePath = settings[4];
         }
 
         private void Save_OnClick(object sender, RoutedEventArgs e)
@@ -64,7 +55,6 @@ namespace Jarvis_2._0.Windows
             settings.Add(PushoverSecret.Text);
             settings.Add(PushoverId.Text);
             settings.Add(MovieFolder.Text);
-            settings.Add(TorrentDestination.Text);
 
             File.WriteAllLines(@"Settings.txt", settings);
 
@@ -94,19 +84,6 @@ namespace Jarvis_2._0.Windows
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
                     MovieFolder.Text = fbd.SelectedPath;
-                }
-            }
-        }
-
-        private void ChooseDownload_OnClick(object sender, RoutedEventArgs e)
-        {
-            using (var fbd = new FolderBrowserDialog())
-            {
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-                {
-                    TorrentDestination.Text = fbd.SelectedPath;
                 }
             }
         }

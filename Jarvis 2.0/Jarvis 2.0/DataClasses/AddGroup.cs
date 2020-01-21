@@ -1,7 +1,6 @@
 ﻿#region Imports
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -12,5 +11,4 @@ namespace Jarvis_2._0
         public string ActionsData { set; get; }
         public string Active { set; get; }
     }
-    //clean
 }

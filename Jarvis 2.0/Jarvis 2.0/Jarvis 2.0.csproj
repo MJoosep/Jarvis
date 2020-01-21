@@ -314,7 +314,6 @@
     <Compile Include="Misc\ConsoleOutputManager.cs" />
     <Compile Include="Misc\JarvisMobileConnection.cs" />
     <Compile Include="NewElements\NewShowElement.cs" />
-    <Compile Include="Torrent\TorrentManager.cs" />
     <Compile Include="Windows\ConsoleWindow.xaml.cs">
       <DependentUpon>ConsoleWindow.xaml</DependentUpon>
     </Compile>

@@ -1,7 +1,6 @@
 ﻿#region Imports
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -20,5 +19,4 @@ namespace Jarvis_2._0
         public string RottenTomatoes { get; set; }
         public string Poster { get; set; }
     }
-    //clean
 }

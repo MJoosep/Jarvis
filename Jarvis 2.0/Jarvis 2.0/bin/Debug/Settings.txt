@@ -1,5 +1,4 @@
 https://discordapp.com/api/webhooks/552817880945655819/84m77BGk23298D-Idb5gXACP5m0hdYhVOAljy3QDNdoe7hXgTBA0QDwzEV30HjVb4_7I
 8gczmkq7r4omu5h1n1iatv7fktq6utshb8ohsv7v4neaw8r5zj62zsv8ta8d
 3yxugmkin7gja55qv7jbne9ppn37o43fz59oy5p1
-S:\Jarvis
-S:\Downloads
+E:\Jarvis

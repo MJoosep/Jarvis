@@ -12,7 +12,6 @@ using System.Text.RegularExpressions;
 using WebSocketSharp;
 
 #endregion
-//clean
 
 namespace Jarvis_2._0
 {
@@ -33,7 +32,6 @@ namespace Jarvis_2._0
         public static string webSocketUrl = "wss://client.pushover.net/push";
 
         #endregion
-        //clean
 
         #region Pushover
 
@@ -262,6 +260,5 @@ namespace Jarvis_2._0
         }
 
         #endregion
-        //clean
     }
 }
