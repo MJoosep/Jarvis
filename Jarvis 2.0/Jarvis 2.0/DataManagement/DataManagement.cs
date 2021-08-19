@@ -583,24 +583,31 @@ namespace Jarvis_2._0
 
             SearchItem result = searchList.SearchResults[0];
 
-            Item item = omdb.GetItemByTitle(result.Title);
+            try
+            {
+                Item item = omdb.GetItemByTitle(result.Title);
 
-            var movieVar = new AddMovieInfo();
+                var movieVar = new AddMovieInfo();
 
-            movieVar.Title = item.Title;
-            movieVar.Plot = item.Plot;
-            movieVar.Genre = item.Genre;
-            movieVar.Director = item.Director;
-            movieVar.Actors = item.Actors;
-            movieVar.Year = item.Year;
-            movieVar.Runtime = item.Runtime;
-            movieVar.Rated = item.Rated;
-            movieVar.Metascore = item.Metascore;
-            movieVar.IMDB = item.ImdbRating;
-            movieVar.RottenTomatoes = item.TomatoRating;
-            movieVar.Poster = item.Poster;
+                movieVar.Title = item.Title;
+                movieVar.Plot = item.Plot;
+                movieVar.Genre = item.Genre;
+                movieVar.Director = item.Director;
+                movieVar.Actors = item.Actors;
+                movieVar.Year = item.Year;
+                movieVar.Runtime = item.Runtime;
+                movieVar.Rated = item.Rated;
+                movieVar.Metascore = item.Metascore;
+                movieVar.IMDB = item.ImdbRating;
+                movieVar.RottenTomatoes = item.TomatoRating;
+                movieVar.Poster = item.Poster;
 
-            MoviesInfoList.Add(movieVar);
+                MoviesInfoList.Add(movieVar);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         public static void WriteMovieDataListToFile()
